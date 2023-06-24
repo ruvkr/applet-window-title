@@ -69,21 +69,10 @@ MouseArea {
             }
         } else if (angle<-10) {
             //! downwards
-            if (!ctrlPressed) {
-                if (windowInfoLoader.item.activeTaskItem
-                        && !windowInfoLoader.item.activeTaskItem.isMinimized
-                        && windowInfoLoader.item.activeTaskItem.isMaximized){
-                    //! maximized
-                    windowInfoLoader.item.activeTaskItem.toggleMaximized();
-                } else if (windowInfoLoader.item.activeTaskItem
-                           && !windowInfoLoader.item.activeTaskItem.isMinimized
-                           && !windowInfoLoader.item.activeTaskItem.isMaximized) {
-                    //! normal
-                    windowInfoLoader.item.activeTaskItem.toggleMinimized();
-                }
-            } else if (windowInfoLoader.item.activeTaskItem
-                       && windowInfoLoader.item.activeTaskItem.isMaximized) {
-                windowInfoLoader.item.activeTaskItem.toggleMaximized();
+            if (windowInfoLoader.item.activeTaskItem
+            	&& !windowInfoLoader.item.activeTaskItem.isMinimized){
+                //! maximized
+                windowInfoLoader.item.activeTaskItem.toggleMinimized();
             }
         }
     }
