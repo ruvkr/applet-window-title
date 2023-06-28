@@ -70,7 +70,7 @@ MouseArea {
         } else if (angle<-10) {
             //! downwards
             if (windowInfoLoader.item.activeTaskItem
-            	&& !windowInfoLoader.item.activeTaskItem.isMinimized){
+                && !windowInfoLoader.item.activeTaskItem.isMinimized){
                 //! maximized
                 windowInfoLoader.item.activeTaskItem.toggleMinimized();
             }
